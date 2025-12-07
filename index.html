@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 2024 Earnings Report</title>
+    
+    <!-- RevealJS Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
+    
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        
+        .reveal .chart-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+        
+        .reveal .email-contact {
+            font-size: 0.8em;
+            color: #42affa;
+            margin-top: 30px;
+        }
+        
+        .reveal .metric-box {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 40px;
+            margin: 15px;
+            border-radius: 10px;
+            min-width: 200px;
+        }
+        
+        .reveal .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .reveal .metric-label {
+            font-size: 0.9em;
+            color: #ddd;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Title Slide -->
+            <section>
+                <h1>Q4 2024 Earnings Report</h1>
+                <h3>Financial Institution Quarterly Review</h3>
+                <p style="margin-top: 50px;">
+                    <small>Prepared by Financial Analytics Team</small>
+                </p>
+                <p class="email-contact">
+                    Contact: 22f3000780@ds.study.iitm.ac.in
+                </p>
+                <aside class="notes">
+                    Welcome everyone to our Q4 2024 earnings presentation. 
+                    Today we'll review our financial performance, key metrics, 
+                    and strategic initiatives. The presentation will take approximately 20 minutes.
+                </aside>
+            </section>
+
+            <!-- Slide 2: Markdown Slide - Executive Summary -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Executive Summary
+                    
+                    ### Key Highlights Q4 2024
+                    
+                    - **Revenue Growth**: 23% YoY increase
+                    - **Net Income**: $4.2B, up 18% from Q3
+                    - **Customer Acquisition**: 2.3M new accounts
+                    - **Digital Transformation**: 85% online transactions
+                    
+                    ---
+                    
+                    ### Strategic Initiatives
+                    
+                    1. Enhanced mobile banking platform
+                    2. AI-powered fraud detection
+                    3. Sustainable finance products
+                    4. International market expansion
+                </textarea>
+                <aside class="notes">
+                    This slide provides a high-level overview. Notice the strong revenue growth 
+                    driven by our digital transformation efforts. We'll dive deeper into each metric.
+                </aside>
+            </section>
+
+            <!-- Slide 3: Animated Financial Metrics -->
+            <section>
+                <h2>Key Financial Metrics</h2>
+                <div class="metric-box fragment fade-up">
+                    <div class="metric-value">$18.7B</div>
+                    <div class="metric-label">Total Revenue</div>
+                </div>
+                <div class="metric-box fragment fade-up">
+                    <div class="metric-value">$4.2B</div>
+                    <div class="metric-label">Net Income</div>
+                </div>
+                <div class="metric-box fragment fade-up">
+                    <div class="metric-value">22.4%</div>
+                    <div class="metric-label">ROE</div>
+                </div>
+                <p class="fragment fade-in" style="margin-top: 40px; font-size: 0.9em;">
+                    All metrics exceed analyst expectations
+                </p>
+                <aside class="notes">
+                    Each metric appears sequentially. Emphasize that we've beaten 
+                    analyst expectations across all categories. ROE of 22.4% shows 
+                    excellent capital efficiency.
+                </aside>
+            </section>
+
+            <!-- Slide 4: Code Sample - Risk Analysis Algorithm -->
+            <section>
+                <h2>Risk Analysis Engine</h2>
+                <p>Python-based credit risk assessment model</p>
+                <pre><code class="python" data-line-numbers="1-2|4-6|8-11|13-15">
+import pandas as pd
+import numpy as np
+
+# Load customer portfolio data
+portfolio = pd.read_csv('customer_data.csv')
+risk_factors = ['credit_score', 'debt_ratio', 'payment_history']
+
+# Calculate risk score using weighted algorithm
+def calculate_risk_score(customer):
+    weights = [0.4, 0.3, 0.3]
+    return np.dot(customer[risk_factors], weights)
+
+# Apply to entire portfolio
+portfolio['risk_score'] = portfolio.apply(calculate_risk_score, axis=1)
+portfolio['risk_category'] = pd.cut(portfolio['risk_score'], bins=3, labels=['Low', 'Medium', 'High'])
+                </code></pre>
+                <aside class="notes">
+                    This shows our credit risk assessment algorithm. Line 1-2 imports libraries.
+                    Lines 4-6 load data. Lines 8-11 define the scoring function using weighted factors.
+                    Lines 13-15 apply it to categorize customers. This processed 2.3M accounts in Q4.
+                </aside>
+            </section>
+
+            <!-- Slide 5: Mathematical Formula - Risk Metrics -->
+            <section>
+                <h2>Risk-Adjusted Return Metrics</h2>
+                <p>Sharpe Ratio Calculation</p>
+                <div style="font-size: 1.2em; margin: 30px 0;">
+                    $$\text{Sharpe Ratio} = \frac{R_p - R_f}{\sigma_p}$$
+                </div>
+                <div class="fragment fade-up">
+                    <p>Where:</p>
+                    <ul style="font-size: 0.8em;">
+                        <li>\(R_p\) = Portfolio return = 14.2%</li>
+                        <li>\(R_f\) = Risk-free rate = 4.5%</li>
+                        <li>\(\sigma_p\) = Portfolio standard deviation = 8.3%</li>
+                    </ul>
+                </div>
+                <div class="fragment fade-up" style="margin-top: 30px;">
+                    <p><strong>Q4 Sharpe Ratio: 1.17</strong> (Excellent risk-adjusted performance)</p>
+                </div>
+                <aside class="notes">
+                    The Sharpe Ratio measures risk-adjusted returns. Our Q4 ratio of 1.17 
+                    indicates strong performance relative to risk taken. Above 1.0 is considered 
+                    good, above 2.0 is very good. This validates our risk management strategy.
+                </aside>
+            </section>
+
+            <!-- Slide 6: More Math - Capital Adequacy -->
+            <section>
+                <h2>Capital Adequacy Ratio</h2>
+                <p>Basel III Compliance</p>
+                <div style="font-size: 1.2em; margin: 30px 0;">
+                    $$\text{CAR} = \frac{\text{Tier 1 Capital} + \text{Tier 2 Capital}}{\text{Risk-Weighted Assets}} \times 100\%$$
+                </div>
+                <div class="fragment">
+                    <div style="margin: 30px 0;">
+                        $$\text{CAR} = \frac{42.5B + 18.3B}{380B} \times 100\% = 16.0\%$$
+                    </div>
+                    <p class="fragment" style="color: #42affa; font-size: 1.1em;">
+                        ✓ Exceeds Basel III minimum requirement of 10.5%
+                    </p>
+                </div>
+                <aside class="notes">
+                    Capital Adequacy Ratio shows our financial stability. At 16%, we're 
+                    significantly above the Basel III requirement of 10.5%, providing a 
+                    strong buffer against potential losses. This positions us well for growth.
+                </aside>
+            </section>
+
+            <!-- Slide 7: Revenue Breakdown with Animation -->
+            <section>
+                <h2>Revenue Distribution</h2>
+                <div class="chart-container">
+                    <canvas id="revenueChart" width="800" height="400"></canvas>
+                </div>
+                <div class="fragment">
+                    <p style="font-size: 0.8em; margin-top: 20px;">
+                        Digital banking revenues grew 45% YoY
+                    </p>
+                </div>
+                <aside class="notes">
+                    This chart shows revenue breakdown by segment. Notice digital banking's 
+                    impressive 45% growth, now representing 35% of total revenue. 
+                    Traditional banking still solid but growing slower at 8%.
+                </aside>
+            </section>
+
+            <!-- Slide 8: Animated Strategic Roadmap -->
+            <section>
+                <h2>2025 Strategic Roadmap</h2>
+                <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                    <div class="fragment fade-right" style="margin: 25px 0; padding: 15px; background: rgba(66, 175, 250, 0.2); border-left: 4px solid #42affa;">
+                        <strong>Q1:</strong> Launch AI chatbot for customer service
+                    </div>
+                    <div class="fragment fade-right" style="margin: 25px 0; padding: 15px; background: rgba(66, 175, 250, 0.2); border-left: 4px solid #42affa;">
+                        <strong>Q2:</strong> Expand cryptocurrency trading platform
+                    </div>
+                    <div class="fragment fade-right" style="margin: 25px 0; padding: 15px; background: rgba(66, 175, 250, 0.2); border-left: 4px solid #42affa;">
+                        <strong>Q3:</strong> Open 50 new branches in emerging markets
+                    </div>
+                    <div class="fragment fade-right" style="margin: 25px 0; padding: 15px; background: rgba(66, 175, 250, 0.2); border-left: 4px solid #42affa;">
+                        <strong>Q4:</strong> Complete digital transformation initiative
+                    </div>
+                </div>
+                <aside class="notes">
+                    Our 2025 roadmap focuses on innovation and expansion. Q1 AI chatbot 
+                    will reduce support costs by 30%. Q2 crypto platform taps into growing 
+                    market. Q3 physical expansion targets high-growth regions. Q4 completes 
+                    our 3-year digital transformation.
+                </aside>
+            </section>
+
+            <!-- Slide 9: SQL Query Example -->
+            <section>
+                <h2>Data Analytics Pipeline</h2>
+                <p>Customer Segmentation Query</p>
+                <pre><code class="sql" data-line-numbers="1-3|5-8|10-12">
+-- High-value customer analysis
+SELECT customer_id, account_balance, transaction_count,
+       CASE 
+           WHEN account_balance > 100000 THEN 'Premium'
+           WHEN account_balance > 50000 THEN 'Gold'
+           ELSE 'Standard'
+       END as customer_tier
+FROM customers
+WHERE active = true
+  AND last_transaction_date >= DATE_SUB(CURRENT_DATE, INTERVAL 90 DAY)
+GROUP BY customer_tier
+ORDER BY account_balance DESC;
+                </code></pre>
+                <aside class="notes">
+                    This SQL query segments our customer base for targeted marketing. 
+                    Lines 1-3 select key metrics. Lines 5-8 categorize into tiers. 
+                    Lines 10-12 filter for active customers. This runs nightly on 8.5M accounts.
+                </aside>
+            </section>
+
+            <!-- Slide 10: Closing Slide -->
+            <section>
+                <h2>Thank You</h2>
+                <h3>Questions & Discussion</h3>
+                <div style="margin-top: 60px;">
+                    <p>For detailed analysis and data:</p>
+                    <p class="email-contact" style="font-size: 1.2em;">
+                        📧 22f3000780@ds.study.iitm.ac.in
+                    </p>
+                </div>
+                <div style="margin-top: 50px; font-size: 0.7em; color: #888;">
+                    <p>Next Earnings Call: Q1 2025 - April 2025</p>
+                </div>
+                <aside class="notes">
+                    Thank you for attending. We're happy to take questions about any aspect 
+                    of our Q4 performance or 2025 strategy. Follow-up materials will be 
+                    distributed via email. Our next earnings call is scheduled for April 2025.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- RevealJS Core -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    
+    <!-- Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    
+    <!-- Chart.js for visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+
+    <script>
+        // Initialize RevealJS
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            
+            math: {
+                mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+                config: 'TeX-AMS_HTML-full'
+            },
+            
+            plugins: [ 
+                RevealMarkdown, 
+                RevealHighlight, 
+                RevealNotes,
+                RevealMath.KaTeX
+            ]
+        });
+
+        // Create revenue chart when slide is shown
+        Reveal.on('slidechanged', event => {
+            if (event.currentSlide.querySelector('#revenueChart')) {
+                const ctx = document.getElementById('revenueChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Digital Banking', 'Investment Services', 'Loans & Mortgages', 'Trading & Markets', 'Other'],
+                        datasets: [{
+                            data: [35, 25, 20, 15, 5],
+                            backgroundColor: [
+                                '#42affa',
+                                '#667eea',
+                                '#764ba2',
+                                '#f093fb',
+                                '#4facfe'
+                            ],
+                            borderWidth: 2,
+                            borderColor: '#1a1a1a'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    color: '#fff',
+                                    font: {
+                                        size: 14
+                                    }
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Revenue by Segment (%)',
+                                color: '#fff',
+                                font: {
+                                    size: 18
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
